@@ -27,7 +27,7 @@ function Colorin() {
 function CheckAnswer(userAnswer) {
 	var correctAnswer = 0;
 	var totalScore = parseFloat($("#total").text());
-	var nombreColorSup = $("#NombreColorSup").textContent;
+	var nombreColorSup = $("#NombreColorSup").text();
 	var colorRGB = 	$("#NombreColorInf").css("color");
 	var colorHex = hexc(colorRGB);
 	
@@ -46,8 +46,18 @@ function CheckAnswer(userAnswer) {
 	else if(nombreColorSup == "verde" && colorHex == "#32b92a") {
 		correctAnswer = 1;
 	}
+	else {
+		correctAnswer = 0;
+	}
 
-	totalScore += (userAnswer == correctAnswer) ? 10 : -5;
+	totalScore +=(userAnswer == correctAnswer) ? 10 : -5;
+	/* if(userAnswer == correctAnswer) {
+		totalScore = totalScore + 10;
+	}
+	else {
+		totalScore = totalScore - 5;
+		}
+	*/
 	
 	Colorin();
 	$("#total").text(totalScore.toString());
@@ -65,8 +75,21 @@ function hexc(colorval) {
     return color;
 }
 
+function conteo(){
+var timer = new Timer();
+timer.start({countdown: true, startValues: {seconds: 50}});
+$('#countdownExample .values').html(timer.getTimeValues().toString());
+timer.addEventListener('secondsUpdated', function (e) {
+    $('#countdownExample .values').html(timer.getTimeValues().toString());
+});
+timer.addEventListener('targetAchieved', function (e) {
+    alert("Score: " + $("#total").text());
+});
+}
+
 // initialize
 function Init() {
+	conteo();
 	Colorin();
 }
 Init();

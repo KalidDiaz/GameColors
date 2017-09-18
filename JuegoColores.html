@@ -11,28 +11,37 @@
 </head>
 <body>
 	<p><h1>Pon aprueba tu cerebro</h1></p>
+
+	<div id="countdownExample">
+		<div class="values"></div>
+	</div>
+
 	<div>
 		<!-- Top label-->
 		<h1><label id="NombreColorSup"></label></h1>
 
 	</div>
 	<div>
+
 		<!-- Bot label -->
 		<h1><label id="NombreColorInf"></label></h1>
 	</div>
+
 	<form>
 		<!-- Buttons -->
 		<button input type="button"  onclick="CheckAnswer(0)">Falso</button>
 		<button input type="button"  onclick="CheckAnswer(1)">Verdaero</button>
 
 	</form>
+
 	<div>
 		<!-- Results -->
 		<label>Total</label>
 		<label id="total">0</label>
 	</div>
 	
-	<script src="jquery-3.2.1.min.js"></script>
-	<script src="GeneracionRandom.js"></script>
+	<script type="text/javascript" src = "LibreriaTimer.js"></script>
+	<script type="text/javascript" src = "jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src = "GeneracionRandom.js"></script>
 </body>
 </html>
