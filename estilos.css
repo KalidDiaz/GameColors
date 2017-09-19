@@ -1,0 +1,32 @@
+header {
+	background:#2c3e50;
+	/*color:#fff;*/
+	color: white;
+}
+
+.main {
+	background:#f2f2f2;
+}
+
+.color1 {
+	background: #34495e;
+	color:#fff;
+}
+
+aside {
+	background:#c0392b;
+	color:#fff;
+}
+
+footer {
+	background:#16a085;
+	color:#fff;
+}
+
+.color2 {
+	background: #58FA58;
+	color: #fff;
+} 
+#AbrirJuego{
+	background-color: #dddddd;	
+}
